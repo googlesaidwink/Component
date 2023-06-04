@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personalized Healthcare Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #d0a5ad;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: #b0d3ad;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .chart {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Personalized Healthcare Dashboard</h1>
+
+    <div class="section">
+      <div class="card" id="card1">
+        <h2 class="card-title">Health Summary</h2>
+        <p> A comprehensive overview of your vital health metrics and medical history, providing valuable insights for proactive management and well-being.</p>
+      </div>
+
+      <div class="card" id="card2">
+        <h2 class="card-title">Health Risk Factors</h2>
+        <p>Identify and assess the distribution of key health risk factors, empowering individuals to make informed decisions for a healthier lifestyle</p>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+
+    <div class="section">
+      <div class="card">
+        <h2 class="card-title">Notifications</h2>
+        <p>Receive real-time notifications and alerts about important health factors, keeping you informed and proactive in managing your well-being.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Appointments</h2>
+        <p>Easily schedule and manage appointments with healthcare providers, ensuring timely access to the care you need for optimal health and wellness.</p>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+
+    <!-- Add more sections with cards as needed -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Function to create a pie chart
+      function createPieChart(data, labels, containerId) {
+        var ctx = document.createElement('canvas');
+        ctx.classList.add('chart');
+        document.getElementById(containerId).appendChild(ctx);
+
+        new Chart(ctx.getContext('2d'), {
+          type: 'pie',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Health Chart',
+              data: data,
+              backgroundColor: ['#ff6384', '#36a2eb', '#ffce56'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true
+          }
+        });
+      }
+
+      // Create pie charts for each card
+      createPieChart([30, 40, 30], ['Exercise', 'Diet', 'Rest'], 'card1');
+      createPieChart([50, 20, 30], ['Pcos', 'depression/anxiety', 'Abdomen pain '], 'card2');
+
+      // Add more pie charts for other cards as needed
+    </script>
+  </div>
+</body>
+</html>
