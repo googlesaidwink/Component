@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .faq-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #77ba89;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #c800be;
+      padding-bottom: 10px;
+    }
+
+    .question {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      cursor: pointer;
+      transition: color 0.3s;
+      color: #df7d7d;
+    }
+
+    .question:hover {
+      color: #a11a1a;
+    }
+
+    .answer {
+      font-size: 14px;
+      margin-top: 0;
+      display: none;
+      color: #010801;
+    }
+
+    .answer.show {
+      display: block;
+    }
+  </style>
+  <script>
+    function toggleAnswer(event) {
+      const answer = event.target.nextElementSibling;
+      answer.classList.toggle("show");
+    }
+  </script>
+</head>
+<body>
+  <div class="faq-section">
+    <h2 style="color: #855ff5;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3 class="question" onclick="toggleAnswer(event)">Are there any support groups or resources available for patients with specific conditions?
+    </h3>
+      <p class="answer">Yes, after your consultant with the doctor you will be directed to needful groups!sharing is caring afterall ;)</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="question" onclick="toggleAnswer(event)">Are telehealth or virtual appointments available? </h3>
+      <p class="answer">Yes,at their comfort state can schedule meet in either mode.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="question" onclick="toggleAnswer(event)">What academic support services are provided, such as tutoring or counseling?</h3>
+      <p class="answer">Both! the user conduct few questionnaire based on which you are first alloted a counselor then further  you can have your personalised academic calendar & resources!</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="question" onclick="toggleAnswer(event)">What extracurricular activities or student organizations are available?</h3>
+        <p class="answer">We offer a wide range of extracurricular activities and student organizations, including sports clubs, cultural societies, volunteering opportunities, and academic clubs, providing students with opportunities to explore their interests, develop new skills, and foster a sense of community.</p>
+    </div>
+</head>
+</body>
+</html>
+
+
